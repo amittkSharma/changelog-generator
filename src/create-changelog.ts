@@ -1,3 +1,5 @@
+import * as Changelog from 'generate-changelog'
+
 class CreateChangelog {
 
   constructor() {
@@ -7,7 +9,10 @@ class CreateChangelog {
   accessChangelog(options: any): string {
     console.log(`access log`)
 
-    return 'Git changelog under construction'
+    return Changelog.generate({ patch: true, repoUrl: 'https://github.com/amittkSharma/changelog-generator' })
+    .then(changelog  => {
+      console.log(changelog)
+    })
   }
 }
 
