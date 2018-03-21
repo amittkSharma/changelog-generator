@@ -1,0 +1,23 @@
+{
+  "name": "changelog-generator",
+  "version": "1.0.0",
+  "description": "Module to generate changelog from Git commit logs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amittkSharma/changelog-generator.git"
+  },
+  "keywords": [
+    "Changelog",
+    "git"
+  ],
+  "author": "AMITT K SHARMA",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amittkSharma/changelog-generator/issues"
+  },
+  "homepage": "https://github.com/amittkSharma/changelog-generator#readme"
+}
