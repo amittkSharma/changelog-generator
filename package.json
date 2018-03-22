@@ -8,7 +8,7 @@
     "build": "tsc && npm run lint",
     "lint": "tslint --exclude 'node_modules/**/*.ts' '**/*.ts'",
     "prestart": "npm run build",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js | bunyan --color -o short"
   },
   "repository": {
     "type": "git",
