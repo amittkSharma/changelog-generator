@@ -1,18 +1,17 @@
 import { generate } from 'generate-changelog'
+import { log } from '../src/logger'
+import { write } from '../src/writer'
+import { GeneratorOptions } from './types/index'
 
 class CreateChangelog {
 
-  constructor() {
-    console.log(`Creating Changelog`)
-  }
-
-  accessChangelog(options: any) {
-    const repoUrl = 'https://github.com/amittkSharma/changelog-generator'
-    console.log(`access log ${repoUrl}`)
-    generate({ major: true, repoUrl })
+  accessChangelog(options: GeneratorOptions) {
+    log.info(`trying to access logs for repo: ${options.repoUrl} for version ${options.version}`)
+    const version = options.version
+    const repoUrl = options.repoUrl
+    generate({ [version]: true, repoUrl })
     .then(changelog  => {
-
-      console.log(changelog)
+      write(changelog, 'CHANGELOG.md', 'F:\\Personal_Workspace\\Github\\changelog-generator\\')
     })
   }
 }
