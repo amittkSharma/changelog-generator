@@ -7,7 +7,6 @@
   "scripts": {
     "build": "tsc && npm run lint",
     "lint": "tslint --exclude 'node_modules/**/*.ts' '**/*.ts'",
-
     "prestart": "npm run build",
     "start": "node dist/index.js"
   },
@@ -26,6 +25,7 @@
   },
   "homepage": "https://github.com/amittkSharma/changelog-generator#readme",
   "devDependencies": {
+    "@types/generate-changelog": "^1.7.0",
     "tslint": "^5.9.1",
     "typescript": "^2.7.2"
   },

@@ -1,4 +1,4 @@
-import * as Changelog from 'generate-changelog'
+import { generate } from 'generate-changelog'
 
 class CreateChangelog {
 
@@ -6,11 +6,12 @@ class CreateChangelog {
     console.log(`Creating Changelog`)
   }
 
-  accessChangelog(options: any): string {
-    console.log(`access log`)
-
-    return Changelog.generate({ patch: true, repoUrl: 'https://github.com/amittkSharma/changelog-generator' })
+  accessChangelog(options: any) {
+    const repoUrl = 'https://github.com/amittkSharma/changelog-generator'
+    console.log(`access log ${repoUrl}`)
+    generate({ major: true, repoUrl })
     .then(changelog  => {
+
       console.log(changelog)
     })
   }
